@@ -9,7 +9,7 @@ argparser = argparse.ArgumentParser(description='Online Multi-agent Cache Networ
 argparser.add_argument('--max_capacity', default=5, type=int, help='Maximum capacity per cache')
 argparser.add_argument('--min_capacity', default=5, type=int, help='Minimum capacity per cache')
 argparser.add_argument('--max_weight', default=5, type=float, help='Maximum edge weight')
-argparser.add_argument('--min_weight', default=1, type=float, help='Minimum edge weigh/')
+argparser.add_argument('--min_weight', default=1, type=float, help='Minimum edge weight')
 argparser.add_argument('--time_horizon', default=TIME_HORIZON, type=int, help='Time horizon')
 argparser.add_argument('--catalog_size', default=CATALOG_SIZE, type=int, help='Catalog size')
 argparser.add_argument('--query_nodes', default=QUERY_NODES, type=str, help='Nodes generating queries')
