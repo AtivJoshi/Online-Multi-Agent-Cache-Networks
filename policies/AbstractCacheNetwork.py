@@ -236,6 +236,8 @@ class AbstractCacheNetwork(ABC):
                     sum_x_opt = np.sum(candidates_opt_fractional_states[:i + 1])
                     if sum_x <= 1 and adapt_state:
                         # subgradients get reset in the adapt_state() method of the child class 
+                        # only \del_x u_{t,i} is computed here in step 5
+                        # multiplication by theta will be done in the child class 
                         self.subgradients[owner][candidates[:i + 1], item] += batch[item] * (costs[i + 1] - costs[i])
                     G_fractional[owner] += batch[item] * (costs[i + 1] - costs[i]) * np.min(
                         [1, sum_x])
